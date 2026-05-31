@@ -1,0 +1,23 @@
+### 学生端
+POST http://localhost:8080/api/ai/student/analyze
+Content-Type: application/json
+
+{
+  "query": "宿舍灯不亮，按了开关也没反应"
+}
+
+### 维修人员端
+POST http://localhost:8080/api/ai/worker/suggest
+Content-Type: application/json
+
+{
+  "query": "宿舍灯不亮，怀疑线路问题"
+}
+
+### 管理员端
+POST http://localhost:8080/api/ai/admin/query
+Content-Type: application/json
+
+{
+  "query": "本周未处理报修有多少条"
+}

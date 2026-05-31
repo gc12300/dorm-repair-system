@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cmd /c '\"C:\\\\Program Files\\\\MySQL\\\\MySQL Server 5.5\\\\bin\\\\mysql.exe\" -u root -p123456 < backend\\\\sql\\\\schema.sql 2>&1')",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell($env:JAVA_HOME = \"C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-17.0.15.6-hotspot\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:PATH\"; Set-Location D:\\\\dorm-repair-system\\\\backend; & \"D:\\\\apache-maven-3.9.6\\\\bin\\\\mvn.cmd\" compile -q 2>&1; if \\($?\\) { Write-Output \"Compile OK\" } else { Write-Output \"Compile FAILED\" })",
+      "PowerShell($env:JAVA_HOME = \"C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-17.0.15.6-hotspot\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:PATH\"; Set-Location D:\\\\dorm-repair-system\\\\backend; & \"D:\\\\apache-maven-3.9.6\\\\bin\\\\mvn.cmd\" spring-boot:run -q 2>&1)",
+      "PowerShell(Start-Sleep -Seconds 15; try { $resp = Invoke-WebRequest -Uri http://localhost:8080/api/user/login -Method POST -ContentType \"application/json;charset=utf-8\" -Body '{\"username\":\"admin\",\"password\":\"123456\"}' -UseBasicParsing -TimeoutSec 5; Write-Output \"Backend UP: $\\($resp.StatusCode\\)\" } catch { Write-Output \"Not ready: $_\" })"
+    ]
+  }
+}

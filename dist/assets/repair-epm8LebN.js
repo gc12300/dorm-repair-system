@@ -1,0 +1,1 @@
+import{r as e}from"./user--0TZNkVS.js";function a(r){return e.post("/repair/submit",r)}function i(){return e.get("/repair/my")}function n(){return e.get("/repair/all")}function p(r){return e.put("/repair/handle",r)}function s(r){return e.post("/repair/rate",r)}export{i as a,n as g,p as h,s as r,a as s};

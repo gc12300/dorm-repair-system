@@ -1,0 +1,1 @@
+import{r as a}from"./user--0TZNkVS.js";function n(t){return a.post("/ai/student/analyze",{query:t})}function r(t){return a.post("/ai/worker/suggest",{query:t})}function u(t){return a.post("/ai/admin/query",{query:t})}function s(){return a.get("/ai/quota")}export{n as a,s as g,u as n,r as s};
